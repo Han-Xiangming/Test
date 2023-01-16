@@ -6,8 +6,11 @@
 输出: 3
 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
 """
+
 s = input()
-sl = []
-for i in s:
-    sl.append(i)
-print(sl)
+sl, c = [], []
+sl.extend(iter(s))
+for i in range(len(sl)):
+    if sl[i] == sl[i + 1]:
+        c.clear()
+    c.append(sl[i])
