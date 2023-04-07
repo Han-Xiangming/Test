@@ -15,7 +15,6 @@
 【样例输出】
 1
 """
-
 m = eval(input())
 n = eval(input())
 cnt = 0
