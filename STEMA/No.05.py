@@ -26,7 +26,7 @@ I2 = eval(input())
 
 # 处理数据
 def gcd(a, b):
-    biggest = a if a > b else b
+    biggest = max(a, b)
     for i in range(biggest + 1):
         if a % (biggest - i) == 0 and b % (biggest - i) == 0:
             return biggest - i

@@ -15,10 +15,8 @@
 【样例输出】
 1
 """
+
 m = eval(input())
 n = eval(input())
-cnt = 0
-for i in range(m, n + 1):
-    if '8' in str(i):
-        cnt += 1
+cnt = sum('8' in str(i) for i in range(m, n + 1))
 print(cnt)
