@@ -9,7 +9,10 @@
 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
 """
 
-
+"""
+https://han-xiangming.lanzouy.com/iiFhm1k23zsf
+密码:47qb
+"""
 def twoSum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
