@@ -12,11 +12,15 @@
 【样例输出】
 [40,20,10]
 """
-array = [int(i) for i in input().split(' ')]
-for i in range(len(array) - 1):
-    maxindex = i
-    for j in range(maxindex + 1, len(array)):
-        if array[maxindex] < array[j]:
-            maxindex = j
-    array[maxindex], array[i] = array[i], array[maxindex]
-print(array)
+def bubble_sort(a):
+    array = [int(num) for num in a.split(' ')]
+    n = len(array)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if array[j] < array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+    return array
+
+input_str = input()
+sorted_array = bubble_sort(input_str)
+print(sorted_array)
