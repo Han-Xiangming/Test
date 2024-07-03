@@ -11,11 +11,13 @@ LCR 119. 最长连续序列
 输入：nums = [0,3,7,2,5,8,4,6,0,1]
 输出：9
 """
+
+
 def longestConsecutive(nums):
     if not nums:
         return 0
-    # nums = list(set(nums))
-    # nums.sort()
+    nums = list(set(nums))
+    nums.sort()
     max_streak = 1
     current_streak = 1
     for i in range(len(nums) - 1):
@@ -25,3 +27,6 @@ def longestConsecutive(nums):
         else:
             current_streak = 1
     return max_streak
+
+
+print(longestConsecutive([int(i) for i in input().split()]))
